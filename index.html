@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment</title>
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-
 <body>
-<form action="index.php".php" method="post">
-    Name: <input type="text" name="name"><br>
-    E-mail: <input type="text" name="email"><br>
-    <input type="submit">
-</form>
+    <div class="container">
+        
+        <button type="submit" onclick="openPopup()" class="btn">Submit</button>
+        <div class="popup" id="popup">
+            <img src="mark-g42186dfb5_640.png" alt="">
+            <h2>Thank You!</h2>
+            <p>Your details have been successfully submitted.<br> Have a good one.</p>
+            <button type="button" onclick="closePopup()">Ok</button>
+        </div>
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
 
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
 </body>
-
 </html>
